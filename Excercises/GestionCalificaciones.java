@@ -13,6 +13,10 @@ public void ejecutar(int posicion, Estudiante estudiante){
     this.estudiantes[posicion] = estudiante;
 }
 
+// public void verDatos (){
+//     for( i : estudiantes){
+        
+//     }
 }
 
 
