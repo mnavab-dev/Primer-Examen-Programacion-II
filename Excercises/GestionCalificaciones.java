@@ -9,11 +9,8 @@ public Estudiante [] getEstudiantes (){
     return estudiantes;
 }
 
-void setEstudiantes(){
-    this.estudiantes[0] = estudiantes[0];
-    this.estudiantes[1] = estudiantes[1];
-    this.estudiantes[2] = estudiantes[2];
-
+public void ejecutar(int posicion, Estudiante estudiante){
+    this.estudiantes[posicion] = estudiante;
 }
 
 }
