@@ -1,8 +1,8 @@
 package Excercises;
 import model.Estudiante;
-import Excercises.GestionCalificaciones;
+// import Excercises.GestionCalificaciones;
 
-import java.util.Arrays;
+// import java.util.Arrays;
 import java.util.Scanner;
 
 // Clase Ejercicio 1 con posicionEstudiante para controlar en que parte del array estudiantes de GestionCalificaciones.java se van a guardar los datos de Estudiante.java actuales
@@ -17,7 +17,7 @@ public class Ejercicio1{
     // Controla el submenu del ejercicio 1, puede volver a Main.java si se presiona 9;
     public static void ejecutar(){   
         // int opcionSubmenu = 0;
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
         int opcionEjecutar = 0;
         // opcionEjecutar = scanner.nextInt(); 
         while(opcionEjecutar != 9){
@@ -29,7 +29,9 @@ public class Ejercicio1{
                     subMenuCalificaciones();
                     break;
                 case 9:
+                    
                     break;
+                    
                 default:
                     break;
             }
@@ -99,10 +101,11 @@ public class Ejercicio1{
                     if(i != null){
                         System.out.println(i);
                     }
-                    System.out.println("Estudiantes aprobados: " + estudiantesAprobados);
-                    System.out.println("Estudiantes reprobados " + estudiantesReprobados );
+
                     
                 }
+                System.out.println("Estudiantes aprobados: " + estudiantesAprobados);
+                System.out.println("Estudiantes reprobados " + estudiantesReprobados );
                 return;
             
             case 9:
@@ -115,8 +118,8 @@ public class Ejercicio1{
              
         }
 
-       
-
+        scanner.close();
+        
         
     }
 
