@@ -22,8 +22,8 @@ public class Main {
     // }
     
     public static void  main(String [] args){
-        int posicionEstudiante = 0;
-        GestionCalificaciones gestionDeCalificaciones = new GestionCalificaciones();
+        // int posicionEstudiante = 0;
+        // GestionCalificaciones gestionDeCalificaciones = new GestionCalificaciones();
         int opcion = 0;
         // int subMenuOpcion = 0;
         Scanner scanner = new Scanner(System.in);

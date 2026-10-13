@@ -61,14 +61,15 @@ public class Ejercicio1{
                 System.out.println("Precaucion! Ingresar datos nuevamente sobreescribira los datos actuales en el arreglo de GestionCalificaciones.java");
                 System.out.println("1. Sobreescribir");
                 System.out.println("2. Modificar datos existentes");
+                System.out.println("3.Consultar Estudiante");
                 opcionSubmenu = scanner.nextInt();
             } 
             switch (opcionSubmenu) {
             case 1:
                 System.out.println("Ingrese la identificacion del estudiante. ");
-                estudiante.setIdentificacion(scanner.next());
+                estudiante.setIdentificacion(scanner.nextLine());
                 System.out.println("Ingrese el nombre del Estudiante:");
-                estudiante.setNombre(scanner.next());
+                estudiante.setNombre(scanner.nextLine());
                 System.out.println("Ingrese el numero de matricula");
                 estudiante.setMatricula(scanner.nextInt());
                 for (int i = 0; i < calificaciones.length; i++){
@@ -81,6 +82,7 @@ public class Ejercicio1{
                 posicionEstudiante ++;
                 
                 return;
+            
             case 9:
                 System.out.println("Cerrando...");
                 return;
