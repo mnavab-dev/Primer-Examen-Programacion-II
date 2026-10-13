@@ -1,4 +1,5 @@
 package Excercises;
+import model.CuentaBancaria;
 import model.Estudiante;
 // import Excercises.GestionCalificaciones;
 
@@ -42,6 +43,7 @@ public class Ejercicio1{
         // GestionCalificaciones gestionDeCalificaciones = new GestionCalificaciones();
         
         int opcionSubmenu= 0;
+        
         Estudiante estudiante = new Estudiante();
         double calificaciones[] = new double[3];
         // Scanner scanner = new Scanner(System.in);

@@ -27,10 +27,23 @@ public class Ejercicio2{
     }
 
     public static void subeMenuCuentaBancaria(){
+        int opcionSubmenu= 0;
+        CuentaBancaria cuentaBancaria = new CuentaBancaria();
         System.out.println("1.Ingresar datos de cuenta");
         System.out.println("2.Hacer deposito");
         System.out.println("3.Hacer retiro");
         System.out.println("4. Mostrar saldo");
+        opcionSubmenu = scanner.nextInt();
+        switch (opcionSubmenu) {
+            case 2:
+                cuentaBancaria.depositar();
+                break;
+        
+            default:
+                break;
+        }
+
+
     }
     
 
