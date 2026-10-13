@@ -1,6 +1,8 @@
 package Excercises;
 import model.Estudiante;
 import Excercises.GestionCalificaciones;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 // Clase Ejercicio 1 con posicionEstudiante para controlar en que parte del array estudiantes de GestionCalificaciones.java se van a guardar los datos de Estudiante.java actuales
@@ -9,6 +11,8 @@ public class Ejercicio1{
     static GestionCalificaciones gestionCalificaciones = new GestionCalificaciones();
     static int posicionEstudiante = 0;
     static Scanner scanner = new Scanner(System.in);
+    static int estudiantesAprobados = 0;
+    static int estudiantesReprobados = 0;
     
     // Controla el submenu del ejercicio 1, puede volver a Main.java si se presiona 9;
     public static void ejecutar(){   
@@ -41,6 +45,7 @@ public class Ejercicio1{
         // Scanner scanner = new Scanner(System.in);
         System.out.println("1. Ingresar datos de estudiante");
         System.out.println("2. Modificar datos de estudiante");
+        System.out.println("3. Consultar Estudiante");
         System.out.println("9. Volver.......................");
         opcionSubmenu = scanner.nextInt();
         if (opcionSubmenu < 1 || opcionSubmenu > 9){
@@ -56,31 +61,48 @@ public class Ejercicio1{
        }
         
         while (opcionSubmenu != 9){
-            if (posicionEstudiante ==3 ){
-                posicionEstudiante = 0;
-                System.out.println("Precaucion! Ingresar datos nuevamente sobreescribira los datos actuales en el arreglo de GestionCalificaciones.java");
-                System.out.println("1. Sobreescribir");
-                System.out.println("2. Modificar datos existentes");
-                System.out.println("3.Consultar Estudiante");
-                opcionSubmenu = scanner.nextInt();
-            } 
+            // if (posicionEstudiante ==3 ){
+                // posicionEstudiante = 0;
+                // System.out.println("Precaucion! Ingresar datos nuevamente sobreescribira los datos actuales en el arreglo de GestionCalificaciones.java");
+                // System.out.println("1. Sobreescribir");
+                // System.out.println("2. Modificar datos existentes");
+                
+            //     opcionSubmenu = scanner.nextInt();
+            // } 
             switch (opcionSubmenu) {
             case 1:
                 System.out.println("Ingrese la identificacion del estudiante. ");
-                estudiante.setIdentificacion(scanner.nextLine());
+                estudiante.setIdentificacion(scanner.next());
+                scanner.nextLine();
                 System.out.println("Ingrese el nombre del Estudiante:");
                 estudiante.setNombre(scanner.nextLine());
                 System.out.println("Ingrese el numero de matricula");
-                estudiante.setMatricula(scanner.nextInt());
+                estudiante.setMatricula(scanner.nextInt()); //Limpia la linea restante del scanner para poder asignar input al siguiente scanner;
                 for (int i = 0; i < calificaciones.length; i++){
                     System.out.println("Ingrese la calificacion " +(i+1));
                     calificaciones[i] = scanner.nextDouble();
                 }
                 estudiante.setCalificaciones(calificaciones);
+                System.out.println("Estuante: " + estudiante.getNombre() + " Aprobado? " + estudiante.getAprobado(false));
+                if (estudiante.getAprobado(true)){
+                    estudiantesAprobados++;
+                } else{
+                    estudiantesReprobados ++;
+                }
                 // subMenuCalificaciones();
                 gestionCalificaciones.ejecutar(posicionEstudiante, estudiante);
                 posicionEstudiante ++;
                 
+                return;
+            case 3:
+                for (Estudiante i : gestionCalificaciones. getMostrarInformacion()){
+                    if(i != null){
+                        System.out.println(i);
+                    }
+                    System.out.println("Estudiantes aprobados: " + estudiantesAprobados);
+                    System.out.println("Estudiantes reprobados " + estudiantesReprobados );
+                    
+                }
                 return;
             
             case 9:
