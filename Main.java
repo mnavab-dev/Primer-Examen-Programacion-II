@@ -4,6 +4,7 @@ import java.util.Scanner;
 // import Excercises.GestionCalificaciones;
 import Excercises.Ejercicio1;
 import Excercises.OperacionesBancarias;
+import Excercises.SistemaEmpleados;
 
 
 public class Main {
@@ -44,6 +45,8 @@ public class Main {
                     OperacionesBancarias.ejecutar();
                     opcion = 0;
                     break;
+                case 3:
+                    SistemaEmpleados.ejecutar();
             
                 default:
                     menu();
