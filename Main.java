@@ -3,7 +3,7 @@ import java.util.Scanner;
 // import model.Estudiante;
 // import Excercises.GestionCalificaciones;
 import Excercises.Ejercicio1;
-import Excercises.Ejercicio2;
+import Excercises.OperacionesBancarias;
 
 
 public class Main {
@@ -41,7 +41,7 @@ public class Main {
                     break; //***Break siempre entre casos!! */
                     // opcion = scanner.nextInt();
                 case 2:
-                    Ejercicio2.ejecutar();
+                    OperacionesBancarias.ejecutar();
                     opcion = 0;
                     break;
             
