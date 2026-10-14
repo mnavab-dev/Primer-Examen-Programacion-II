@@ -15,6 +15,7 @@ public class OperacionesBancarias{
         int opcionEjecutar = 0;
         // subeMenuCuentaBancaria();
         
+        
         Random random = new Random();
         cuentaBancaria.setNumeroCuenta(random.nextInt(100000));
         cuentaBancaria.setSaldo(random.nextDouble(1000000));
@@ -22,15 +23,17 @@ public class OperacionesBancarias{
         System.out.println("Ingrese el nombre del titular");
         cuentaBancaria.setTitular(scanner.nextLine());
         System.out.println("\n1. Ingresar Datos bancarios - 9. Regresar");
-        opcionEjecutar = scanner.nextInt();
+        
         while (opcionEjecutar != 9){
+        opcionEjecutar = scanner.nextInt();
         switch (opcionEjecutar) {
             case 1:
                 
                 subeMenuCuentaBancaria();
                 break;
             case 9:
-                return ;
+                System.out.println("Salir");
+                break ;
             
             default:
                 return;
@@ -62,10 +65,12 @@ public class OperacionesBancarias{
                 cuentaBancaria.mostrarSaldo();
                 return;
             case 9:
+                // scanner.next();
                 cuentaBancaria.mostrarSaldo();
-                System.out.println("Cerrando...");
-                ejecutar();
-                break; 
+                System.out.println("Cerrando...");  
+                System.out.println("Presione 9 nuevamente y luego enter  para salir");
+                // ejecutar();
+                return; 
 
         
             default:
