@@ -34,10 +34,12 @@ public static void ejecutar (){
     if (opcionEjecutar == 1){
         subMenuSistemaEmpleados();
     }
+  
 
 
 
 }
+//   scanner.close();
 
 public static void subMenuSistemaEmpleados(){
     
@@ -55,10 +57,17 @@ public static void subMenuSistemaEmpleados(){
     scanner.nextLine();
         switch (opcionSubmenu) {
         case 1:
+            if (posicionEmpleado >= 4){
+                System.out.println("Precaucion! Base de datos de empleado llena, hacer mas entradas va a sustituir la informacion actual.");
+                posicionEmpleado = 0;
+            }
             Empleado empleado = new Empleado("", 0);
             
             System.out.println("Digite el nombre del empleado: ");
             empleado.setNombre(scanner.nextLine());
+            scanner.nextLine();
+            System.out.println("Digite el numero de empleado");
+            empleado.setNumeroEmpleado(scanner.nextInt());
             // scanner.next();
             System.out.println("Digite la edad del empleado: ");
             empleado.setEdad(scanner.nextInt());
@@ -93,7 +102,7 @@ public static void subMenuSistemaEmpleados(){
         default:
             break;
     }
-    scanner.close();
+    // scanner.close();
     }
     // scanner.close();
 

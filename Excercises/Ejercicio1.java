@@ -48,14 +48,14 @@ public class Ejercicio1{
         double calificaciones[] = new double[3];
         // Scanner scanner = new Scanner(System.in);
         System.out.println("1. Ingresar datos de estudiante");
-        System.out.println("2. Modificar datos de estudiante");
-        System.out.println("3. Consultar Estudiante");
+        // System.out.println("2. Modificar datos de estudiante");
+        System.out.println("2. Consultar Estudiante");
         System.out.println("9. Volver.......................");
         opcionSubmenu = scanner.nextInt();
         if (opcionSubmenu < 1 || opcionSubmenu > 9){
             System.out.println("`\n\n\nOpcion invalida, por favor seleccione una opcion entre 1 y 9");
-            System.out.println("1. Ingresar datos de estudiante");
-            System.out.println("2. Modificar datos de estudiante");
+            System.out.println("2. Ingresar datos de estudiante");
+            // System.out.println("2. Modificar datos de estudiante");
             System.out.println("9. Volver.......................");
             opcionSubmenu = scanner.nextInt();
 
@@ -98,7 +98,7 @@ public class Ejercicio1{
                 posicionEstudiante ++;
                 
                 return;
-            case 3:
+            case 2:
                 for (Estudiante i : gestionCalificaciones. getMostrarInformacion()){
                     if(i != null){
                         System.out.println(i);
