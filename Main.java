@@ -1,5 +1,7 @@
 // import java.util.Arrays;
 import java.util.Scanner;
+
+import Excercises.AnalisisconArreglosYBucles;
 // import model.Estudiante;
 // import Excercises.GestionCalificaciones;
 import Excercises.Ejercicio1;
@@ -47,7 +49,8 @@ public class Main {
                     break;
                 case 3:
                     SistemaEmpleados.ejecutar();
-            
+                case 4:
+                    AnalisisconArreglosYBucles.ejecutar();
                 default:
                     menu();
                     break;

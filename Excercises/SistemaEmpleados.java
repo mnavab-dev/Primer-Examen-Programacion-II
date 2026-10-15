@@ -45,6 +45,7 @@ public static void subMenuSistemaEmpleados(){
     
     SistemaEmpleados sistemaEmpleados = new SistemaEmpleados();
     Scanner scanner = new Scanner(System.in);
+    // int controladorPresentacion = 0;
     double totalSalario = 0;
     double totalBono = 0;
     int posicionEmpleado = 0;
@@ -52,6 +53,8 @@ public static void subMenuSistemaEmpleados(){
     while (opcionSubmenu !=9){
     System.out.println("1.Agregar empleado");
     System.out.println("2. Consultar Informacion de empleados registrados");
+    System.out.println("3. Presentarse");
+    System.out.println("9. Salir");
     System.out.println("9. Salir");
     opcionSubmenu = scanner.nextInt();
     scanner.nextLine();
@@ -95,6 +98,14 @@ public static void subMenuSistemaEmpleados(){
                 System.out.println("Salario total de los empleados: " + totalSalario);
                 System.out.println("Bono total de los empleados: " + totalBono);
             }
+        case 3:
+           for (Empleado i : sistemaEmpleados.getMostrarInformacion()){
+                if (i != null) {
+                    i.presentarse();
+                }
+                break;
+           }
+
         case 9: 
             break;
             
